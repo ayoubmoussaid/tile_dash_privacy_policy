@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Tile Dash Privacy Policy`,
     description: `Privacy Policy for Tile Dash mobile game`,
-    author: `Tile Dash Team`,
+    author: `RainmanDev`,
     siteUrl: `https://yourdomain.com`, // Update this with your actual domain
   },
   plugins: [],
