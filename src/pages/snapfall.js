@@ -32,7 +32,8 @@ const SnapfallPage = () => {
         This Privacy Policy explains how Snapfall ("the App", "we", "us", or "our") handles
         information when you use our mobile game. Snapfall has no accounts of its own and does
         not send your game data to us. The only services that receive data are Google AdMob,
-        which shows ads, and Google Play Games Services, which runs the optional leaderboards.
+        which shows ads, Google Play Games Services, which runs the optional leaderboards, and
+        Firebase Crashlytics, which reports errors so we can fix them.
         By using the App, you agree to the practices described in this policy.
       </p>
 
@@ -107,11 +108,29 @@ const SnapfallPage = () => {
         .
       </p>
 
-      <h3 style={h3Styles}>4. What We Do Not Collect</h3>
+      <h3 style={h3Styles}>4. Crash Reports (Firebase Crashlytics)</h3>
+      <p style={paragraphStyles}>
+        When the App crashes or runs into an error, Firebase Crashlytics sends us a report so we
+        can find and fix the problem. A report includes:
+      </p>
+      <ul>
+        <li style={paragraphStyles}>Technical details of the error and where it happened in the App</li>
+        <li style={paragraphStyles}>Device model, Android version, and App version</li>
+        <li style={paragraphStyles}>
+          A random installation identifier, used to count how many devices an error affects. It
+          is not linked to your name, account, or advertising ID.
+        </li>
+      </ul>
+      <p style={paragraphStyles}>
+        Crash reports contain no game progress or personal information, and they are used only
+        to diagnose and fix bugs.
+      </p>
+
+      <h3 style={h3Styles}>5. What We Do Not Collect</h3>
       <p style={paragraphStyles}>
         The App does not ask for your name, email address, phone number, contacts, photos, or
-        precise location. It does not include analytics or crash-reporting services, and we do
-        not operate any server that receives your data.
+        precise location. It does not use analytics, and we do not operate any server that
+        receives your data.
       </p>
 
       <h2 style={subheadingStyles}>How Information Is Used</h2>
@@ -119,6 +138,7 @@ const SnapfallPage = () => {
         <li style={paragraphStyles}>To save your progress and settings on your device</li>
         <li style={paragraphStyles}>To show leaderboards, if you use Play Games</li>
         <li style={paragraphStyles}>To display advertisements that keep the App free</li>
+        <li style={paragraphStyles}>To diagnose and fix crashes and errors</li>
       </ul>
 
       <h2 style={subheadingStyles}>Data Sharing</h2>
@@ -145,6 +165,11 @@ const SnapfallPage = () => {
             <td style={tdStyles}>Google</td>
             <td style={tdStyles}>Optional sign-in and leaderboards</td>
           </tr>
+          <tr>
+            <td style={tdStyles}>Firebase Crashlytics</td>
+            <td style={tdStyles}>Google</td>
+            <td style={tdStyles}>Crash and error reporting</td>
+          </tr>
         </tbody>
       </table>
       <p style={paragraphStyles}>
@@ -168,6 +193,9 @@ const SnapfallPage = () => {
         </li>
         <li style={paragraphStyles}>
           <strong>Advertising data</strong> is retained by Google according to its policies.
+        </li>
+        <li style={paragraphStyles}>
+          <strong>Crash reports</strong> are retained for 90 days.
         </li>
       </ul>
 
@@ -198,14 +226,14 @@ const SnapfallPage = () => {
       <h2 style={subheadingStyles}>Security</h2>
       <p style={paragraphStyles}>
         Your game data is stored on your device. Communication between the App and Google's
-        services is encrypted in transit. However, no method of electronic storage or
+        services, including crash reports, is encrypted in transit. However, no method of electronic storage or
         transmission is 100% secure.
       </p>
 
       <h2 style={subheadingStyles}>Changes to This Privacy Policy</h2>
       <p style={paragraphStyles}>
         We may update this Privacy Policy from time to time, for example if the App starts using
-        a new service. Any changes will be reflected by an updated "Last updated" date at the
+        another service. Any changes will be reflected by an updated "Last updated" date at the
         top of this page, before the version of the App they apply to is released.
       </p>
 

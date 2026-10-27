@@ -16,7 +16,7 @@ Gatsby 5 static site that hosts the privacy policies for RainmanDev's mobile gam
 ## Architecture
 
 - `src/pages/index.js` — Tile Dash privacy policy (site root; its URL is on the Tile Dash Play listing, so keep it at `/`).
-- `src/pages/snapfall.js` — Snapfall privacy policy, served at `/snapfall/`. Snapfall uses only on-device storage, Google AdMob (with UMP consent) and Google Play Games Services leaderboards; no Firebase, analytics or crash reporting.
+- `src/pages/snapfall.js` — Snapfall privacy policy, served at `/snapfall/`. Snapfall uses on-device storage, Google AdMob (with UMP consent), Google Play Games Services leaderboards and Firebase Crashlytics; no analytics or other Firebase services.
 - `src/styles/policy.js` — Shared inline styles. Each page uses Gatsby's Head API for its title.
 - `src/privacy_policy.html` — Original HTML reference file (not used by Gatsby).
 - `static/app-ads.txt` — AdMob ad monetization file, served as-is at the site root.
