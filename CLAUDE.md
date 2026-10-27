@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Gatsby 5 static site that hosts the privacy policy for the **Tile Dash** mobile game. The site is a single-page app with inline React styles — no CSS framework or external stylesheets.
+Gatsby 5 static site that hosts the privacy policies for RainmanDev's mobile games: **Tile Dash** at `/` and **Snapfall** at `/snapfall/`. Pages use inline React styles shared from `src/styles/policy.js` — no CSS framework or external stylesheets.
 
 ## Commands
 
@@ -15,13 +15,15 @@ Gatsby 5 static site that hosts the privacy policy for the **Tile Dash** mobile 
 
 ## Architecture
 
-- `src/pages/index.js` — The entire site: a single React component with inline styles rendering the privacy policy. Uses Gatsby's Head API for the page title.
+- `src/pages/index.js` — Tile Dash privacy policy (site root; its URL is on the Tile Dash Play listing, so keep it at `/`).
+- `src/pages/snapfall.js` — Snapfall privacy policy, served at `/snapfall/`. Snapfall uses only on-device storage, Google AdMob (with UMP consent) and Google Play Games Services leaderboards; no Firebase, analytics or crash reporting.
+- `src/styles/policy.js` — Shared inline styles. Each page uses Gatsby's Head API for its title.
 - `src/privacy_policy.html` — Original HTML reference file (not used by Gatsby).
 - `static/app-ads.txt` — AdMob ad monetization file, served as-is at the site root.
 - `gatsby-config.js` — Minimal config with site metadata only (no plugins).
 
 ## Key Details
 
-- The app uses **Google AdMob** for ads in the mobile game; the privacy policy and `app-ads.txt` reflect this.
+- Both games use **Google AdMob** under the same publisher account; one `app-ads.txt` line covers every app.
 - No test suite, linter, or formatter is configured.
 - `siteUrl` in `gatsby-config.js` is a placeholder (`https://yourdomain.com`) that needs updating for production.

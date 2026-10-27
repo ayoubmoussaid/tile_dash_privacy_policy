@@ -1,6 +1,9 @@
 # Tile Dash Privacy Policy
 
-This is a simple Gatsby static site hosting the privacy policy for the Tile Dash mobile game.
+A simple Gatsby static site hosting the privacy policies for RainmanDev's mobile games:
+
+- Tile Dash: `/`
+- Snapfall: `/snapfall/`
 
 ## Setup
 
@@ -59,7 +62,10 @@ This site can be deployed to various hosting platforms:
 tile_dash_privacy_policy/
 ├── src/
 │   ├── pages/
-│   │   └── index.js          # Main privacy policy page
+│   │   ├── index.js          # Tile Dash privacy policy
+│   │   └── snapfall.js       # Snapfall privacy policy
+│   ├── styles/
+│   │   └── policy.js         # Shared page styles
 │   └── privacy_policy.html   # Original HTML (for reference)
 ├── gatsby-config.js          # Gatsby configuration
 ├── package.json              # Dependencies and scripts

@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Tile Dash Privacy Policy`,
-    description: `Privacy Policy for Tile Dash mobile game`,
+    title: `RainmanDev Privacy Policies`,
+    description: `Privacy policies for RainmanDev's mobile games (Tile Dash, Snapfall)`,
     author: `RainmanDev`,
     siteUrl: `https://yourdomain.com`, // Update this with your actual domain
   },
